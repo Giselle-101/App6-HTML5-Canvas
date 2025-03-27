@@ -132,5 +132,55 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<p>DIY!</p>
 </footer>
 
+    <script>
+        /*
+        =========================================================
+        JavaScript Functions for Canvas Manipulation
+        =========================================================
+        */
+
+        // Retrieve the canvas element and its drawing context
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        /*
+        Function: drawRectangle
+        Purpose: Draws a blue rectangle onto the canvas.
+        */
+        function drawRectangle() {
+            ctx.fillStyle = "blue"; // Sets the fill color to blue
+            ctx.fillRect(50, 50, 200, 100); // Draws a rectangle at coordinates (50,50) with width 200 and height 100
+        }
+        
+        /*
+        Function: drawName
+        Purpose: Writes text onto the canvas.
+        */
+        function drawName() {
+            ctx.font = "30px Arial"; // Sets the font size and type
+            ctx.fillStyle = "red"; // Sets the text color to red
+            ctx.fillText("Your Name", 100, 150); // Draws the text "Your Name" at coordinates (100,150)
+        }
+        
+        /*
+        Function: loadImage
+        Purpose: Loads an image onto the canvas from an external source.
+        */
+        function loadImage() {
+            var img = new Image(); // Creates a new Image object
+            img.src = "https://via.placeholder.com/150"; // URL of the placeholder image
+            img.onload = function() {
+                ctx.drawImage(img, 125, 75, 150, 150); // Draws the image at coordinates (125,75) with dimensions 150x150
+            }
+        }
+        
+        /*
+        Function: clearCanvas
+        Purpose: Clears the entire canvas, removing all drawings and text.
+        */
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clears everything within the canvas dimensions
+        }
+    </script>
 </body>
 </html>
