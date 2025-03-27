@@ -97,6 +97,29 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
+</head>
+<body>
+    <!-- Header section containing the title of the app -->
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>App6---HTML5-Canvas</h1>
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p>Content goes here.</p>
+        
+        <div class="canvas-container">
+            <!-- Creates an HTML5 Canvas Element where drawings will be rendered -->
+            <canvas id="myCanvas" width="400" height="300"></canvas>
+            <div class="button-container">
+                <!-- Buttons that allow user interaction with the canvas -->
+                <button onclick="drawRectangle()">Draw Rectangle</button> <!-- Draws a rectangle onto the canvas -->
+                <button onclick="drawName()">Draw Name</button> <!-- Writes the user’s name onto the canvas -->
+                <button onclick="loadImage()">Load Image</button> <!-- Loads an external image onto the canvas -->
+                <button onclick="clearCanvas()">Clear Canvas</button> <!-- Clears the canvas -->
+            </div>
+        </div>
+    </div>
+
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
